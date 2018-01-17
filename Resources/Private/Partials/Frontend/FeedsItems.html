@@ -21,10 +21,10 @@
                         </span>
                     </f:if>
                 </div>
+                <p class="social-feed-message">
+                    <f:format.raw>{feed.message -> pxa:parseMessage(type: feed.configuration.token.socialType) -> f:format.nl2br()}</f:format.raw>
+                </p>
             </a>
-            <p class="social-feed-message">
-                <f:format.raw>{feed.message -> f:format.nl2br() -> pxa:parseMessage(type:feed.configuration.token.socialType)}</f:format.raw>
-            </p>
         </li>
     </f:for>
 </ul>
